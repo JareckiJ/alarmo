@@ -1,0 +1,85 @@
+{
+  "services": {
+    "arm": {
+      "name": "Aktywacja alarmu",
+      "description": "Uzbrój alarm wg własnych preferencji.",
+      "fields": {
+        "entity_id": {
+          "name": "ID encji",
+          "description": "Encja, która wskazuje uzbrojenie alarmu."
+        },
+        "code": {
+          "name": "Kod",
+          "description": "Kod używany do uzbrojenia alarmu."
+        },
+        "mode": {
+          "name": "Tryb",
+          "description": "Tryb, w którym alarm jest uzbrojony."
+        },
+        "skip_delay": {
+          "name": "Ignoruj opóźnienie",
+          "description": "Pomiń czas na opuszczenie budynku."
+        },
+        "force": {
+          "name": "Wymuszenie",
+          "description": "Automatycznie ignoruj czujniki, które blokują uzbrojenie alarmu."
+        }
+      }
+    },
+    "disarm": {
+      "name": "Rozbrojenie alarmu",
+      "description": "Encja wskazująca na rozbrojenie alarmu.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+          "description": "Encja, która wskazuje rozbrojenie alarmu."
+        },
+        "code": {
+          "name": "Kod",
+          "description": "Kod używany do rozbrojenia alarmu."
+        }
+      }
+    },
+    "skip_delay": {
+      "name": "Ignoruj opóźnienie włączenia alarmu",
+      "description": "Ignoruj powiadomienie przy wyjściu/wejściu do mieszkania, wówczas będzie wprowadzony kolejny status alarmu.",
+      "fields": {
+        "entity_id": {
+          "name": "ID encji",
+          "description": "Encja wskazująca na pominięcie opóźnienia uruchomienia/dezaktywacji alarmu."
+        }
+      }
+    },
+    "enable_user": {
+      "name": "Aktywacja użytkownika",
+      "description": "Nadaj użytkownikowi prawo do uzbrajania/rozbrajania alarmu.",
+      "fields": {
+        "name": {
+          "name": "Nazwa",
+          "description": "Nazwa użytkownika, któremu zostanie nadany dostęp."
+        }
+      }
+    },
+    "disable_user": {
+      "name": "Blokada użytkownika",
+      "description": "Blokada użytkownika w celu uzbrajani/rozbrajania alarmu.",
+      "fields": {
+        "name": {
+          "name": "Nazwa",
+          "description": "Nazwa użytkownika, któremu zostanie odebrany dostęp."
+        }
+      }
+    }
+  },
+  "selector": {
+    "arm_mode": {
+      "options": {
+        "away": "Uzbrojony w trybie 'poza domem'",
+        "night": "Uzbrojony w trybie nocnym",
+        "home": "Uzbrojony w trybie 'w domu'",
+        "vacation": "AUzbrojony w trybie 'wakacje'",
+        "custom": "Uzbrojony w trybie użytkownika"
+      }
+    }
+  }
+}
